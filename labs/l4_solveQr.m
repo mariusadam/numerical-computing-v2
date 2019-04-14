@@ -2,8 +2,6 @@
 ## Created: 2019-04-13
 
 function [x] = l4_qrSolve(A, b)
-%QRSolve - rezolvare sistem prin metoda QR
-
   [m,n]=size(A);
   u=zeros(m,n); %vectorii de reflexie
   %obtine R si Q^T*b
