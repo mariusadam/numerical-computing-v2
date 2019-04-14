@@ -3,10 +3,11 @@
 
 function [L, U, P] = l4_lupDecomposition(A)
   [m, n] = size(A);
-  piv = 1:n;
+  piv = (1:n)'; # vector coloana pentru permutare
   for k = 1:n-1
     # start pivotare
     [maxValue, maxPosition] = max(abs(A(k:n, k)));
+    maxPosition = maxPosition + k -1; # ???
     A([k, maxPosition], :) = A([maxPosition, k], :);
     piv([k, maxPosition]) = piv([maxPosition, k]);
     # end pivotare
