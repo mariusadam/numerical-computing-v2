@@ -1,7 +1,7 @@
 ## Author: marius <marius@mjolnir>
 ## Created: 2019-04-13
 
-function [x] = l4_qrSolve(A, b)
+function [x] = l4_solveQr(A, b)
   [m,n]=size(A);
   u=zeros(m,n); %vectorii de reflexie
   %obtine R si Q^T*b

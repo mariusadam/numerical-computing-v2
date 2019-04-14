@@ -1,7 +1,7 @@
 ## Author: mariusadam 
 ## Created: 2019-03-24
 
-function [x] = solveGaussElim(A, b)
+function [x] = l4_solveGaussElim(A, b)
   [l,n]=size(A);
   x=zeros(size(b));
   s=sum(abs(A),2);
